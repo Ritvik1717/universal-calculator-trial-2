@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid rgb(204, 204, 204);
+  background-color: orange;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: cyan;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: aqua;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 10px solid lightgray;
+  border-top: none;
+}
+.grey {
+  background-color: #D3D3D3;  
+}
+
+.blue {
+ background-color: aqua;
+}
+</style>
+</head>
+
+<body class="grey">
+    
+ 
+    
+    <hr style="border: 4px solid blue;" /> 
+    
+    <div>
+    <h1 style="background-color:#00FFFF ; font-family: cursive;display: inline-block;">Universal calculator version 4.1</h1>
+    <img src="https://target.scene7.com/is/image/Target/GUEST_78c52946-cf6f-4d72-a1a4-24acea6854c2?wid=488&hei=488&fmt=pjpeg"style="height:70px ;display: inline-block"></img>
+    <p style="background-color:#FDA50F; display: inline-block ; font-size:30px "; ><b>-by Ritvik.gampa</b></p>
+    </div>
+    
+    <hr style="border: 4px solid blue;" >
+ 
+ 
+ 
+ 
+ 
+    <!-- Tab links -->
+ <div class="tab">
+    <button class="tablinks" onclick="opentab(event, 'Older_version')">Try older version</button>
+    <button class="tablinks" id="defaultOpen" onclick="opentab(event, 'Basic_caluculator')">Basic caluculator</button>
+    <button class="tablinks" onclick="opentab(event, 'logarithms')">logarithms</button>
+    <button class="tablinks" onclick="opentab(event, 'temperature')">temperature</button>
+    <button class="tablinks" onclick="opentab(event, 'triangles')">triangles</button>
+    <button class="tablinks" onclick="opentab(event, 'Advanced')">Advanced</button>
+    
+  </div>
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <!-- Tab content -->
+  <div id="Older_version" class="tabcontent"   >
+    <style>
+        .input {
+        display:block;
+        }
+        .orange{
+        background-color:#FDA50F;
+        }
+        .blue {
+        background-color:#00FFFF ;
+        }
+        .button{
+        background-color:#FDA50F;
+        display:inline-block;
+        }
+        .line {
+        border: 4px solid blue;
+        }
+        .solid_bordor {border-style: solid;}
+        
+        .forfulladdition { display: none;}
+        
+        .forfullsubstraction {display: none;}
+        
+        .grey { background-color:#D3D3D3;}
+        </style>
+        </head>
+        <div>
+        
+
+        
+        <button class="orange" onclick="addition_openclose()">click here to open and close addition form</button>
+        
+        
+        <div class="forfulladdition" id="myDIV" style="display: none;">
+         <div >
+          <h3 class="blue" style="text-align:center;">1) Addition</h3>
+        
+          <div style="float:right" class="solid_bordor">
+           <p  class="orange"> enjoy some audio </p>
+          <audio controls="controls" src="https://www.tutorialrepublic.com/examples/audio/birds.mp3">
+                Your browser does not support the HTML5 audio element.
+            </audio>
+        
+         </div>
+        
+         <p>enter x</p>
+         <input id="1" class="input" ></input>
+         <p>enter y</p>
+         <input id="2" class="input" ></input>
+         <button class="button"  onclick="addition()">click here to add</button>
+         <p id="demo" class="blue" style="display:inline-block;"></p>
+         </div>
+        </div >
+        
+        
+        
+        
+        <button class="orange" onclick="substraction_openclose()">click here to open and close substraction form</button>
+        
+        
+        <div class="forfullsubstraction" id="myDIV_2" >
+         <div>
+         <h3 class="blue" style="text-align:center;">1) substraction</h3>
+         <p>enter x</p>
+         <input id="3_subs" class="input" ></input>
+         <p>enter y</p>
+         <input id="4_subs" class="input" ></input>
+         <button class="button" ; onclick="substraction()">click here to substract</button>
+        
+         <p id="demo_subs" class="blue" style="display:inline-block;"></p>
+         </div>
+        </div>
+        
+        
+        <script>
+        function addition() {
+          var x = parseFloat (document.getElementById("1").value)
+          var y = parseFloat (document.getElementById("2").value)
+          var result = "Result = "
+          var z = x + y
+          document.getElementById("demo").innerHTML =  result + "" + z;
+        }
+        
+        function substraction() {
+          var x = parseFloat (document.getElementById("3_subs").value)
+          var y = parseFloat (document.getElementById("4_subs").value)
+          var result = "Result = "
+          var z = x - y
+          document.getElementById("demo_subs").innerHTML =  result + "" + z;
+        }
+        </script>
+        
+          
+        <script>
+        function addition_openclose() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }}
+            
+            function substraction_openclose() {
+            var x = document.getElementById("myDIV_2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }}
+            
+        </script>
+</div>
+</div>
+ 
+<div id="Basic_caluculator" class="tabcontent">
+    <script> 
+           
+        function dis(val) 
+        { 
+            document.getElementById("result").value+=val 
+        } 
+          
+         
+        function solve() 
+        { 
+            let x = document.getElementById("result").value 
+            let y = eval(x) 
+            document.getElementById("result").value = y 
+        } 
+          
+        
+        function clr() 
+        { 
+            document.getElementById("result").value = "" 
+        } 
+        
+        function creator() {
+         document.getElementById("for_creator").innerHTML= " is the creator"
+          
+        }
+     
+     
+     
+      </script> 
+     
+     <style>
+ 
+        input[type="button"] 
+        { 
+        background-color:#FDA50F; 
+        color: black; 
+        border: solid black 2px; 
+        width:100% 
+        } 
+ 
+        input[type="text"] 
+        { 
+        background-color:white; 
+        border: solid black 2px; 
+        width:100% 
+        } 
+        .grey_forbasic { background-color:#d3d3d3;}
+        
+        .blue {background-color: aqua;}
+     </style> 
+    
+    
+    
+    
+    
+    
+    
+    <div>
+        <h3 style= "background-color: orange;display: block;"> calculator basic version - by Ritvik.gampa </h3>
+       <div style="display: block;">
+        <table style="border-collapse: collapse; background-color: aqua; height: 200px; width: 300px ; 
+        " > 
+           <tr> 
+              <td colspan="3"><input type="text" id="result"/></td> 
+              
+              <td><input type="button" style="cursor: pointer" value="clear" onclick="clr()"/> </td> 
+           </tr> 
+           <tr > 
+             
+              <td><input type="button" style="cursor: pointer" value="1" onclick="dis('1')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="2" onclick="dis('2')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="3" onclick="dis('3')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="/" onclick="dis('/')"/> </td> 
+           </tr> 
+           <tr> 
+              <td><input type="button" style="cursor: pointer" value="4" onclick="dis('4')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="5" onclick="dis('5')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="6" onclick="dis('6')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="-" onclick="dis('-')"/> </td> 
+           </tr> 
+           <tr> 
+              <td><input type="button" style="cursor: pointer" value="7" onclick="dis('7')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="8" onclick="dis('8')"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="9" onclick="dis('9')"/> </td> 
+              <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+           </tr> 
+           <tr> 
+              <td><input type="button" style="cursor: pointer" value="." onclick="dis('.')"/> </td> 
+              <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+              
+              <td><input type="button" style="cursor: pointer" value="=" onclick="solve()"/> </td> 
+              <td><input type="button" style="cursor: pointer" value="*" onclick="dis('*')"/> </td> 
+           </tr> 
+        </table> 
+       </div>
+        
+       <!-- <button style="display: block; padding: 10px;" onclick="creator()" class="blue"> made by ritvik.gampa </button>
+        <p id="for_creator" style="display: inline-block;"></p> -->
+  </div>
+</div>
+
+<div id="logarithms" class="tabcontent">
+  <style>
+    .orange { background-color: #FDA50F
+    
+    ;}
+    
+    .blue { background-color: aqua ;}
+    </style> 
+    
+ <h3 style="display: inline-block;" class="blue">logarithm is in form of : </h3>
+ <h3 id="id_for_logarithms_1" style="display: inline-block;" class="orange"> </h3>
+  
+  <p class="blue">enter b </p>
+  <input id="for_logarithms_value_2" >
+  
+  
+  <p class="blue" style="text-emphasis: size 10px;">enter the value of a (base) </p>
+  <input id="for_logarithms_value" >
+  
+ <button class="orange"; onclick="calculate_logarithms()">enter</button>
+   
+
+  
+  <p class="orange" style="display: inline-block;" > result :</p>
+  <p id="id_for_logarithms" style="display: inline-block;" ><b></b></p>
+  
+  <h2>what are logarithms ?</h2>
+  <img src="https://www.mathsisfun.com/algebra/images/exponent-to-logarithm-gen.gif"></img>
+  
+  <h2>some logarithm formulas : </h2>
+  <img src="https://i.pinimg.com/originals/13/99/65/139965b0feffcc8230ff7cc159e2cfc6.jpg" 
+  style="height: 500px;width: 400px;"></img>
+  
+  <script >
+   var a = "a"
+   document.getElementById("id_for_logarithms_1").innerHTML = "log" + a.sub() + "b"
+   
+   function calculate_logarithms() {
+    var base = parseFloat (document.getElementById("for_logarithms_value").value)
+    var to_what = parseFloat (document.getElementById("for_logarithms_value_2").value)
+    answer = Math. log(to_what) / Math. log(base)
+    document.getElementById("id_for_logarithms").innerHTML = answer
+    
+   
+   }
+  
+ </script> 
+  </div> 
+
+
+<div id="temperature" class="tabcontent">
+ <h2 style="background-color: #FDA50F;display: inline-block;">Choose the set of convertor and start converting</h2>
+  <div id="tempconvertor_0504">
+
+    <div style="background-color: aqua ; display: inline-block;">
+    <h3>celcius to Fahrenheit</h3>
+    <p>
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+      </p>
+      <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+      
+      <script>
+      function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+      }
+      </script>
+    </div>
+    
+    
+    <div style="background-color: aqua ; display: inline-block;">
+        <h3>celcius to Kelvin</h3>
+        <p>
+        <label>celsius : </label>
+        <input id="inputCelsius_1" type="number" placeholder="Celsius" oninput="temperatureConverter_1(this.value)" 
+        onchange="temperatureConverter_1(this.value)">
+      </p>
+      <p>Kelvin: <span id="outputKelvin_1"></span></p>
+      
+      <script>
+      function temperatureConverter_1(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputKelvin_1").innerHTML=valNum+273.15;
+      }
+      </script>
+    
+    
+    </div>
+    
+    <div style="background-color: aqua ; display: inline-block;">
+    <h3>Fahrenheit to celsius </h3>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter_2(this.value)" onchange="temperatureConverter_2(this.value)">
+          </p>
+          <p>Celcius: <span id="outputCelcius"></span></p>
+          
+          <script>
+          function temperatureConverter_2(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+          }
+          </script>
+    
+    </div>
+    
+    <div style="background-color: aqua ; display: inline-block;">
+        <h3>Fahrenheit to Kelvin</h3>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter_3(this.value)" onchange="temperatureConverter_3(this.value)">
+          </p>
+          <p>Kelvin: <span id="outputKelvin"></span></p>
+          
+          <script>
+          function temperatureConverter_3(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputKelvin").innerHTML=((valNum-32)/1.8)+273.15;
+          }
+          </script>
+    
+    </div>
+    
+    </div> 
+</div>
+
+<div id="Advanced" class="tabcontent">
+  <p>nothing is out yet this will be developed by ritvik few days later </p>
+  </div>
+
+<div id="triangles" class="tabcontent">
+
+  
+  <style>
+      .button_1 {
+        background-color: #00FFFF;
+        border: none;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      </style>
+  
+   <button class="button_1" onclick="myFunction_heron() "  ><b>herons formula</b></button> 
+    
+   <div id="myDIV_heron" style="display:none ;" >
+         
+      
+       
+      <input id="inputside1" type="number" placeholder="side1" ></input>
+      <input id="inputside2" type="number" placeholder="side2" ></input>
+      <input id="inputside3" type="number" placeholder="side3" ></input>    
+      
+      
+      <button onclick="herons_formula() " class="orange">run</button> 
+      <p id="lol" class="blue"></p>
+    <script>
+      function herons_formula() 
+       {
+      var side1 = parseFloat(document.getElementById("inputside1").value) 
+      var side2 = parseFloat(document.getElementById("inputside2").value )
+      var side3 = parseFloat(document.getElementById("inputside3").value )
+      var s = (side1 + side2 + side3)/2;
+      var area =  Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+      document.getElementById("lol").innerHTML = area;
+         }
+    </script>
+     </div>
+   
+     <script>
+      function myFunction_heron() {
+        var x = document.getElementById("myDIV_heron");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      </script>
+ 
+   
+</div>
+  
+
+
+    
+
+
+
+  <div id="date_current">
+
+    <hr style=" border: 4px solid blue;"></hr>  
+  
+   <button class ="button" onclick="document.getElementById('for_date').innerHTML=Date()">click here 
+    to know the time</button>
+   <p id="for_date" style="display: inline-block;" class="blue"></p> 
+  </div>
+  
+ 
+
+
+
+  <div id="2020_over" style="background-color: aqua;">
+    <div>
+      <p id="demo_1"></p>
+    
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+    
+    // Update the count down every 1 second
+    var wa = setInterval(function() {
+    
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo_1").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s " + "" + "for 2020 to be completed";
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(wa);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+    </script> 
+    </div>
+     </div> 
+
+
+  
+
+
+
+  
+  
+  
+  
+  
+  
+<script>
+
+function opentab(evt, section) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(section).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+
+
+ 
+
+
+
+
+
+</html>
